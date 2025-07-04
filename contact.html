@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Sufyan Khalid</title>
+    <title>Contact - Brand Voiced</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
@@ -20,9 +20,9 @@
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
+                <a href="packages-and-pricing.html">Packages & Pricing</a>
                 <a href="case-studies.html">Case Studies</a>
-                <a href="services.html">Services</a>
-                <a href="contact.html" class="active nav-cta">Let's Talk</a>
+                <a href="contact.html" class="active">Contact</a>
             </div>
             <button class="mobile-menu-btn">
                 <span></span>
@@ -58,7 +58,47 @@
                         <h2 class="contact-form-title">Schedule Your Free Strategy Call</h2>
                         <p class="contact-form-subtitle">Take the first step towards LinkedIn excellence</p>
                         
-                        <form id="contactForm" class="contact-form-element">
+                        <form id="contactForm" class="contact-form-element" action="https://formsubmit.co/el/confirm/sufyan@brandvoiced.com" method="POST">
+                            <!-- Honeypot to prevent spam -->
+                            <input type="text" name="_honey" style="display: none">
+                            <!-- Disable captcha -->
+                            <input type="hidden" name="_captcha" value="false">
+                            <!-- Success page -->
+                            <input type="hidden" name="_next" value="thank-you.html">
+                            <!-- Auto-response configuration -->
+                            <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Brand Voiced!
+
+Dear {name},
+
+We have received your inquiry about our {package} package. This email confirms that your message has been successfully submitted.
+
+Our team will carefully review your LinkedIn goals and requirements, and we'll get back to you within 24 hours with a personalized response.
+
+Here's a summary of what you shared with us:
+- Selected Package: {package}
+- LinkedIn Profile: {linkedin}
+- Your Goals: {message}
+
+While you wait, feel free to:
+- Follow us on LinkedIn: https://linkedin.com/in/sufyankhalid
+- Check out our case studies: https://brandvoiced.com/case-studies.html
+- Browse our full range of services: https://brandvoiced.com/packages-and-pricing.html
+
+If you have any urgent questions, you can reach us directly:
+- WhatsApp: +923216005209
+- Email: sufyan@brandvoiced.com
+
+Thank you for considering Brand Voiced for your LinkedIn growth journey. We're excited to help you achieve your professional goals!
+
+Best regards,
+Sufyan Khalid
+Founder, Brand Voiced
+LinkedIn Growth Specialist">
+                            <!-- Template Subject -->
+                            <input type="hidden" name="_template" value="box">
+                            <!-- Auto-response Subject -->
+                            <input type="hidden" name="_subject" value="Thank you for contacting Brand Voiced - We'll be in touch soon!">
+                            
                             <div class="contact-form-group">
                                 <label for="name">Full Name</label>
                                 <input type="text" id="name" name="name" required>
@@ -75,15 +115,60 @@
                                 <label for="package">Select Your Package</label>
                                 <select id="package" name="package" required>
                                     <option value="">Choose a package</option>
-                                    <option value="content-only">Content-Only ($350-$550/mo)</option>
-                                    <option value="done-with-you">Done-With-You ($550-$1,000/mo)</option>
-                                    <option value="done-for-you">Done-For-You ($1,000-$1,500/mo)</option>
+                                    <optgroup label="LinkedIn Ghostwriting">
+                                        <option value="ghostwriting-basic">Basic Ghostwriting ($450/mo - 12 posts)</option>
+                                        <option value="ghostwriting-standard">Standard Ghostwriting ($575/mo - 16 posts)</option>
+                                        <option value="ghostwriting-premium">Premium Ghostwriting ($690/mo - 20 posts)</option>
+                                    </optgroup>
+                                    <optgroup label="Profile Optimization">
+                                        <option value="profile-makeover">Complete Profile Makeover ($500 one-time)</option>
+                                        <option value="profile-banner">Custom Banner Design ($150 one-time)</option>
+                                        <option value="profile-about">About Section Optimization ($200 one-time)</option>
+                                        <option value="profile-complete">Complete Profile Bundle ($750 one-time)</option>
+                                    </optgroup>
+                                    <optgroup label="LinkedIn Management">
+                                        <option value="management-starter">Starter Management ($500/mo - 8 posts)</option>
+                                        <option value="management-growth">Growth Management ($720/mo - 12 posts)</option>
+                                        <option value="management-premium">Premium Management ($990/mo - 16 posts)</option>
+                                    </optgroup>
+                                    <optgroup label="Additional Services">
+                                        <option value="engagement-boost">Engagement Boost ($300/mo)</option>
+                                        <option value="content-strategy">Content Strategy Plan ($400 one-time)</option>
+                                        <option value="consultation">1-on-1 Consultation ($150/hour)</option>
+                                    </optgroup>
                                 </select>
                             </div>
                             <div class="contact-form-group">
                                 <label for="message">Your LinkedIn Goals</label>
                                 <textarea id="message" name="message" rows="5" placeholder="Tell me about what you want to achieve on LinkedIn" required></textarea>
                             </div>
+                            <style>
+                                .contact-submit-btn {
+                                    background-color: #222;
+                                    color: #fff;
+                                    padding: 15px 30px;
+                                    border: 2px solid #222;
+                                    border-radius: 5px;
+                                    font-family: 'Playfair Display', serif;
+                                    font-size: 18px;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    width: 100%;
+                                    margin-top: 20px;
+                                }
+                                
+                                .contact-submit-btn:hover {
+                                    background-color: #444;
+                                    border-color: #444;
+                                    color: #fff;
+                                    transform: translateY(-2px);
+                                    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                                }
+                                
+                                .contact-submit-btn:active {
+                                    transform: translateY(0);
+                                }
+                            </style>
                             <button type="submit" class="contact-submit-btn">Book Your Strategy Call</button>
                         </form>
                     </div>
@@ -153,22 +238,22 @@
             
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>Services</h4>
+                    <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#">LinkedIn Optimization</a></li>
-                        <li><a href="#">Content Strategy</a></li>
-                        <li><a href="#">Ghost Writing</a></li>
-                        <li><a href="#">Profile Enhancement</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="packages-and-pricing.html">Packages & Pricing</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
-                    <h4>Quick Links</h4>
+                    <h4>Services</h4>
                     <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="case-studies.html">Case Studies</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="packages-and-pricing.html#linkedin-optimization">LinkedIn Optimization</a></li>
+                        <li><a href="packages-and-pricing.html#content-strategy">Content Strategy</a></li>
+                        <li><a href="packages-and-pricing.html#ghost-writing">Ghost Writing</a></li>
+                        <li><a href="packages-and-pricing.html#profile-enhancement">Profile Enhancement</a></li>
                     </ul>
                 </div>
                 
@@ -201,5 +286,24 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+    <script>
+        // Form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            const submitBtn = this.querySelector('.contact-submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.style.opacity = '0.7';
+            submitBtn.disabled = true;
+
+            // Reset button after 2 seconds (FormSubmit will handle the actual submission)
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.style.opacity = '1';
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+    </script>
 </body>
 </html> 
